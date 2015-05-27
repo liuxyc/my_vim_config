@@ -1,7 +1,33 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+
+Bundle 'gmarik/vundle'  
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'bling/vim-airline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+"Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/ctags.vim'
+Bundle 'vim-scripts/vcscommand.vim'
+Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/DoxygenToolkit.vim'
+Bundle 'vim-scripts/a.vim'
+
+
+" All of your Plugins must be added before the following line
+"
+call vundle#end()            " required
+filetype plugin indent on    " required
+filetype plugin on  
 
 colorscheme Corn
 
+"for airline
 set laststatus=2 
+let g:airline_detect_whitespace=0
 
 set go-=r
 set go-=b
@@ -21,7 +47,6 @@ set linebreak      " 整词换行
 syntax enable   
 syntax on 
 
-set nocompatible
 set backspace=indent,eol,start
 set foldenable " Turn on folding
 set foldmethod=indent " Make folding indent sensitive
@@ -32,8 +57,6 @@ set autoread
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
-set modelines=0
- 
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -47,7 +70,7 @@ set tenc=utf-8
 set fenc=utf-8
 set fencs=utf-8,usc-bom,gbk
 set number
-set tags=~/mytags/tags,~/mytags/py_tag,./tags,tags,./tag;
+set tags=~/mytags/tags,./tags,tags,./tag;
 
 
 set autoindent " same level indent
@@ -93,20 +116,14 @@ map <leader>p :NERDTreeToggle<cr>
 
 map <c-x><c-n> <tab-s>
 
-let g:pydiction_location = '/home/liuxiaoyu/.vim/pydiction/complete-dict'
-
-let g:pydiction_menu_height = 5
 
 :silent cs add ~/mytags/cscope.out
 
-set makeprg=eagle.py
 nmap <F6> :make <cr>:cw<cr>
-let g:airline_powerline_fonts=0
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#bufferline#enabled = 0 
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
 
+"A
+map <leader>a :A<cr>
 
+"let g:Powerline_symbols = 'fancy'
 
+let g:VCSCommandMapPrefix=',v'
