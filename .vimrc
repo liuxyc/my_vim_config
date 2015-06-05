@@ -15,6 +15,7 @@ Bundle 'vim-scripts/vcscommand.vim'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'vim-scripts/a.vim'
+Bundle 'vim-scripts/bufexplorer.zip'
 
 
 " All of your Plugins must be added before the following line
@@ -27,7 +28,10 @@ colorscheme Corn
 
 "for airline
 set laststatus=2 
-let g:airline_detect_whitespace=0
+"let g:airline_detect_whitespace=0
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#buffer_idx_mode = 1 
 
 set go-=r
 set go-=b
@@ -120,10 +124,9 @@ map <c-x><c-n> <tab-s>
 :silent cs add ~/mytags/cscope.out
 
 nmap <F6> :make <cr>:cw<cr>
+nmap <leader>bn :bn<cr>
 
 "A
 map <leader>a :A<cr>
-
-"let g:Powerline_symbols = 'fancy'
 
 let g:VCSCommandMapPrefix=',v'
