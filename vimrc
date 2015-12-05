@@ -14,16 +14,15 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'terryma/vim-expand-region'
 Bundle 'vim-scripts/a.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'drmingdrmer/xptemplate'
 Bundle 'godlygeek/csapprox'
 Bundle 'vim-scripts/taglist.vim'
-"Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/ctags.vim'
 "Bundle 'vim-scripts/DoxygenToolkit.vim'
+"Bundle 'scrooloose/syntastic'
+"Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'vim-scripts/bufexplorer.zip'
-"
 
 " All of your Plugins must be added before the following line
 "
@@ -44,6 +43,7 @@ let g:indent_guides_guide_size=1
 hi IndentGuidesOdd ctermbg=black
 hi IndentGuidesEven ctermbg=darkgrey
 
+let g:cpp_class_scope_highlight = 1
 
 let g:ConqueGdb_Leader = 'asd'
 
@@ -114,7 +114,7 @@ set tenc=utf-8
 set fenc=utf-8
 set fencs=utf-8,usc-bom,gbk
 set number
-set tags=~/mytags/tags
+"set tags=~/mytags/tags,tags
 
 
 set autoindent " same level indent
