@@ -59,9 +59,12 @@ let g:ctrlp_mruf_max = 250
 "set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o
 
 let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_always_populate_location_list = 0
+let g:ycm_always_populate_location_list = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_show_diagnostics_ui = 0
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
+let g:ycm_filepath_completion_use_working_dir = 1
+let g:ycm_confirm_extra_conf = 0
 
 set go-=r
 set go-=b
