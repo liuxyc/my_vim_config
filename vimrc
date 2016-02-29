@@ -45,8 +45,6 @@ hi IndentGuidesEven ctermbg=darkgrey
 
 let g:cpp_class_scope_highlight = 1
 
-let g:ConqueGdb_Leader = 'asd'
-
 let g:ag_prg="ag --cpp --vimgrep"
 
 "for airline
