@@ -3,6 +3,7 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+"git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'vim-scripts/vcscommand.vim'
@@ -19,7 +20,7 @@ Bundle 'drmingdrmer/xptemplate'
 Bundle 'godlygeek/csapprox'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/ctags.vim'
-"Bundle 'vim-scripts/DoxygenToolkit.vim'
+Bundle 'vim-scripts/DoxygenToolkit.vim'
 "Bundle 'scrooloose/syntastic'
 "Bundle 'nathanaelkane/vim-indent-guides'
 "Bundle 'vim-scripts/bufexplorer.zip'
