@@ -13,10 +13,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
-Bundle 'terryma/vim-expand-region'
+"Bundle 'terryma/vim-expand-region'
 Bundle 'vim-scripts/a.vim'
 Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'drmingdrmer/xptemplate'
+"Bundle 'drmingdrmer/xptemplate'
 Bundle 'godlygeek/csapprox'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/ctags.vim'
@@ -46,7 +46,7 @@ hi IndentGuidesEven ctermbg=darkgrey
 
 let g:cpp_class_scope_highlight = 1
 
-let g:ag_prg="ag --cpp --vimgrep"
+let g:ag_prg="ag --cpp --cc --vimgrep"
 
 "for airline
 set laststatus=2 
@@ -156,14 +156,16 @@ map <leader>o :Tlist<cr>
 "打开文件管理窗口
 map <leader>p :NERDTreeToggle<cr>
 
-map <c-x><c-n> <tab-s>
-
-
 :silent cs add ~/mytags/cscope.out
 
-nmap <F6> :make <cr>:cw<cr>
+nmap <F6> :w<cr>:make -j8<cr>:bot cw<cr>
+nmap <F5> ::make -j8<cr>:bot cw<cr>
 nmap <leader>bn :bn<cr>
 nmap <F7> :!cd ~/mytags/ && ./mktags.sh <cr>:cs reset <cr>
+noremap <Leader>s :update<CR>
+inoremap <Leader>s <esc>:update<CR>
+nmap <leader>cv :VCSVimDiff<cr>
+
 
 "A
 map <leader>a :A<cr>
