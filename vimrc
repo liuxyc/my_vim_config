@@ -181,3 +181,7 @@ nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:bot cw<CR>
 nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:bot cw<CR>
 nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
 
+nmap <C-Right> :wincmd l<CR>
+nmap <C-Left> :wincmd h<CR>
+nmap <C-Up> :wincmd j<CR>
+nmap <C-Down> :wincmd k<CR>
