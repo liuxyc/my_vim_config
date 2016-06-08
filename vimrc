@@ -8,7 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'vim-scripts/vcscommand.vim'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
