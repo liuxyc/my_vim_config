@@ -13,17 +13,12 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
-"Bundle 'terryma/vim-expand-region'
 Bundle 'vim-scripts/a.vim'
 Bundle 'octol/vim-cpp-enhanced-highlight'
-"Bundle 'drmingdrmer/xptemplate'
 Bundle 'godlygeek/csapprox'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
-"Bundle 'scrooloose/syntastic'
-"Bundle 'nathanaelkane/vim-indent-guides'
-"Bundle 'vim-scripts/bufexplorer.zip'
 
 " All of your Plugins must be added before the following line
 "
@@ -183,5 +178,5 @@ nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
 
 nmap <C-Right> :wincmd l<CR>
 nmap <C-Left> :wincmd h<CR>
-nmap <C-Up> :wincmd j<CR>
-nmap <C-Down> :wincmd k<CR>
+nmap <C-Up> :wincmd k<CR>
+nmap <C-Down> :wincmd j<CR>
