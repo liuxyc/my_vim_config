@@ -19,6 +19,7 @@ Bundle 'godlygeek/csapprox'
 Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
+Bundle 'Raimondi/delimitMate'
 
 " All of your Plugins must be added before the following line
 "
@@ -59,7 +60,7 @@ let g:ycm_always_populate_location_list = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_show_diagnostics_ui = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_filepath_completion_use_working_dir = 1
+let g:ycm_filepath_completion_use_working_dir = 0
 let g:ycm_confirm_extra_conf = 0
 
 set go-=r
