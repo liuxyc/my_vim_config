@@ -83,6 +83,7 @@ set t_ut=
 set wrap           " 自动换行
 set linebreak      " 整词换行
 
+set fileformat=unix
 
 "语法高亮
 syntax enable   
