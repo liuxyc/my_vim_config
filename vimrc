@@ -104,7 +104,7 @@ set foldlevel=100 " Don't autofold anything (but I can still fold manually)
 set foldopen-=search " don't open folds when you search into them
 set foldopen-=undo " don't oset helplang=cn
 set autoread
-"set mouse=a
+set mouse=a
 set selection=exclusive
 set selectmode=key
 set tabstop=4
@@ -181,7 +181,7 @@ nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
 
 nmap <C-Right> :wincmd l<CR>
 nmap <C-Left> :wincmd h<CR>
-nmap <C-Up> :wincmd j<CR>
-nmap <C-Down> :wincmd k<CR>
+nmap <C-Up> :wincmd k<CR>
+nmap <C-Down> :wincmd j<CR>
 scriptencoding utf-8
 set encoding=utf-8
