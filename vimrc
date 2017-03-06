@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"https://github.com/universal-ctags/ctags
 
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'vim-scripts/vcscommand.vim'
@@ -17,12 +18,12 @@ Bundle 'vim-scripts/a.vim'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'godlygeek/csapprox'
 Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/ctags.vim'
+"Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'Raimondi/delimitMate'
-Bundle 'ryanoasis/vim-devicons'
-"
-"Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'diepm/vim-rest-console'
+Bundle 'vim-scripts/AnsiEsc.vim'
+Bundle 'pbrisbin/vim-mkdir'
 
 " All of your Plugins must be added before the following line
 "
@@ -38,10 +39,6 @@ autocmd BufReadPost *
 
 set updatetime=100
 
-let g:webdevicons_enable_nerdtree = 1
-"let g:webdevicons_enable_airline_statusline = 0
-"let g:webdevicons_enable_airline_tabline = 0
-"
 let NERDTreeIgnore = ['\.o$', '\.so$']
 
 let g:cpp_class_scope_highlight = 1
@@ -70,6 +67,8 @@ let g:ycm_filepath_completion_use_working_dir = 0
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_server_log_level = 'debug'
 
+
+set fileformat=unix
 set go-=r
 set go-=b
 set vb t_vb=".
@@ -83,7 +82,6 @@ set t_ut=
 set wrap           " 自动换行
 set linebreak      " 整词换行
 
-set fileformat=unix
 
 "语法高亮
 syntax enable   
@@ -181,7 +179,7 @@ nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
 
 nmap <C-Right> :wincmd l<CR>
 nmap <C-Left> :wincmd h<CR>
-nmap <C-Up> :wincmd k<CR>
-nmap <C-Down> :wincmd j<CR>
+nmap <C-Up> :wincmd j<CR>
+nmap <C-Down> :wincmd k<CR>
 scriptencoding utf-8
 set encoding=utf-8
