@@ -40,6 +40,7 @@ autocmd BufReadPost *
 set updatetime=100
 
 let NERDTreeIgnore = ['\.o$', '\.so$']
+let g:NERDTreeMouseMode = 3
 
 let g:cpp_class_scope_highlight = 1
 
@@ -90,11 +91,6 @@ syntax on
 "colorscheme solarized
 color Corn
 
-set cscopetag
-set csto=1
-"set csprg=~/cscopebin/bin/cscope
-set cscopequickfix=c-,d-,e-,g-,i-,s-,t-
-"autocmd FileType * set cscopequickfix=s-,c-,d-,i-,t-,e-,f-
 set backspace=indent,eol,start
 set foldenable " Turn on folding
 set foldmethod=indent " Make folding indent sensitive
@@ -143,22 +139,18 @@ let Tlist_Enable_Fold_Column = 0
 let Tlist_Auto_Update = 1
 let Tlist_Display_Tag_Scop = 1
 let Tlist_Display_Prototyp = 1
-let Tlist_Auto_Update = 1
+let Tlist_Show_One_File = 1
+let Tlist_WinWidth = 30
+let Tlist_Use_SingleClick = 1
 filetype plugin on
-
-
 "打开Tlist
 map <leader>o :Tlist<cr>
+autocmd FileType c,cpp,h.py TlistOpen | wincmd p
 
-"打开文件管理窗口
-map <leader>p :NERDTreeToggle<cr>
-
-:silent cs add ~/mytags/cscope.out
 
 nmap <F6> :w<cr>:make -j8<cr>:bot cw<cr>
-nmap <F5> ::make -j8<cr>:bot cw<cr>
+nmap <F5> :make -j8<cr>:bot cw<cr>
 nmap <leader>bn :bn<cr>
-nmap <F7> :!cd ~/mytags/ && ./mktags.sh <cr>:cs reset <cr>
 noremap <Leader>s :update<CR>
 inoremap <Leader>s <esc>:update<CR>
 nmap <leader>cv :VCSVimDiff<cr>
@@ -166,16 +158,10 @@ nmap <leader>cv :VCSVimDiff<cr>
 "A
 map <leader>a :A<cr>
 
-let g:VCSCommandMapPrefix=',v'
+"打开文件管理窗口
+map <leader>p :NERDTreeToggle<cr>
 
-nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
-nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
-nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
-nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
-nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
-nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:bot cw<CR>
-nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:bot cw<CR>
-nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>:bot cw<CR>
+let g:VCSCommandMapPrefix=',v'
 
 nmap <C-Right> :wincmd l<CR>
 nmap <C-Left> :wincmd h<CR>
@@ -183,3 +169,6 @@ nmap <C-Up> :wincmd j<CR>
 nmap <C-Down> :wincmd k<CR>
 scriptencoding utf-8
 set encoding=utf-8
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
