@@ -58,7 +58,7 @@ let g:ctrlp_cmd = 'CtrlPMRUFiles'
 let g:ctrlp_mruf_max = 250
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.o
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/my_vim_config/ycm_extra_conf.py'
 let g:ycm_always_populate_location_list = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_show_diagnostics_ui = 1
@@ -165,8 +165,8 @@ let g:VCSCommandMapPrefix=',v'
 
 nmap <C-Right> :wincmd l<CR>
 nmap <C-Left> :wincmd h<CR>
-nmap <C-Up> :wincmd j<CR>
-nmap <C-Down> :wincmd k<CR>
+nmap <C-Up> :wincmd k<CR>
+nmap <C-Down> :wincmd j<CR>
 scriptencoding utf-8
 set encoding=utf-8
 
