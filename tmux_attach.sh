@@ -19,17 +19,17 @@ do
   case $opt in
     "NEW SESSION")
       read -p "Enter new session name: " SESSION_NAME
-      tmux new -s "$SESSION_NAME"
+      tmux -2 new -s "$SESSION_NAME"
       break
       ;;
     "BASH")
       bash --login
       break;;
     "GDB")
-      screen -r 
+      tmux -r 
       break;;
     *) 
-      tmux attach-session -t $opt 
+      tmux attach-session -d -t $opt 
       break
       ;; 
   esac
