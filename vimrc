@@ -8,7 +8,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Bundle 'vim-scripts/vcscommand.vim'
-Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-airline/vim-airline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
@@ -17,13 +16,15 @@ Bundle 'rking/ag.vim'
 Bundle 'vim-scripts/a.vim'
 Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'godlygeek/csapprox'
-Bundle 'vim-scripts/taglist.vim'
+"Bundle 'vim-scripts/taglist.vim'
+Bundle 'majutsushi/tagbar'
 "Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/DoxygenToolkit.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'diepm/vim-rest-console'
 Bundle 'vim-scripts/AnsiEsc.vim'
 Bundle 'pbrisbin/vim-mkdir'
+Bundle 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 "
@@ -99,6 +100,8 @@ set foldopen-=search " don't open folds when you search into them
 set foldopen-=undo " don't oset helplang=cn
 set autoread
 set mouse=a
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 set selection=exclusive
 set selectmode=key
 set tabstop=4
@@ -144,8 +147,10 @@ let Tlist_WinWidth = 30
 let Tlist_Use_SingleClick = 1
 filetype plugin on
 "打开Tlist
-map <leader>o :Tlist<cr>
-autocmd FileType c,cpp,h.py TlistOpen | wincmd p
+map <leader>o :TagbarToggle<cr>
+autocmd FileType c,cpp,h.py TagbarOpen | wincmd p
+"map <leader>o :Tlist<cr>
+"autocmd FileType c,cpp,h.py TlistOpen | wincmd p
 
 
 nmap <F6> :w<cr>:make -j8<cr>:bot cw<cr>
@@ -170,5 +175,5 @@ nmap <C-Down> :wincmd j<CR>
 scriptencoding utf-8
 set encoding=utf-8
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
