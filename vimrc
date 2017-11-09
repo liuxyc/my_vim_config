@@ -1,30 +1,33 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"git clone https://github.com/junegunn/vim-plug.git ~/.vim/autoload/plug.vim
 "git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "https://github.com/universal-ctags/ctags
 
-Plugin 'VundleVim/Vundle.vim'
-Bundle 'vim-scripts/vcscommand.vim'
-Bundle 'vim-airline/vim-airline'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 'vim-scripts/a.vim'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'godlygeek/csapprox'
-"Bundle 'vim-scripts/taglist.vim'
-Bundle 'majutsushi/tagbar'
-"Bundle 'vim-scripts/ctags.vim'
-Bundle 'vim-scripts/DoxygenToolkit.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'diepm/vim-rest-console'
-Bundle 'vim-scripts/AnsiEsc.vim'
-Bundle 'pbrisbin/vim-mkdir'
-Bundle 'Valloric/YouCompleteMe'
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'vim-scripts/vcscommand.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rking/ag.vim'
+Plug 'vim-scripts/a.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'godlygeek/csapprox'
+"Plug 'vim-scripts/taglist.vim'
+Plug 'majutsushi/tagbar'
+"Plug 'vim-scripts/ctags.vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'diepm/vim-rest-console'
+Plug 'vim-scripts/AnsiEsc.vim'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'tpope/vim-fugitive'
+call plug#end()
+
 
 " All of your Plugins must be added before the following line
 "
